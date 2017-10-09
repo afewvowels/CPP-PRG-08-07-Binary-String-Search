@@ -25,21 +25,19 @@ void exitHold();
 int main()
 {
     string strNames[INT_NUM_NAMES] = { "Collins, Bill", "Smith, Bart", "Allen, Jim",
-        "Griffin, Jim", "Stamey, Marty", "Rose, Geri",
-        "Taylor, Terri", "Johnson, Jill",
-        "Allison, Jeff", "Looney, Joe", "Wolfe, Bille",
-        "James, Jean", "Weaver, Jim", "Pore, Bob",
-        "Rutherford, Greg", "Javens, Renee",
-        "Harrison, Rose", "Setzer, Cathy",
-        "Pike, Gordon", "Holland, Beth" };
+                                        "Griffin, Jim", "Stamey, Marty", "Rose, Geri",
+                                        "Taylor, Terri", "Johnson, Jill",
+                                        "Allison, Jeff", "Looney, Joe", "Wolfe, Bille",
+                                        "James, Jean", "Weaver, Jim", "Pore, Bob",
+                                        "Rutherford, Greg", "Javens, Renee",
+                                        "Harrison, Rose", "Setzer, Cathy",
+                                        "Pike, Gordon", "Holland, Beth" };
     
     sortNameArray(strNames);
     
     displayNames(strNames);
     
     binaryStringSearch(strNames);
-    
-    exitHold();
     
     return 0;
 }
@@ -89,7 +87,7 @@ void binaryStringSearch(const string names[])
     bool found = false;
     
     cout << "Please enter a name to search for:\n";
-    cin.getline(value);
+    getline(cin, value);
     
     while (!found && first <= last)
     {
@@ -119,12 +117,3 @@ void binaryStringSearch(const string names[])
         cout << "That name was not found.\n";
     }
 }
-
-void exitHold()
-{
-    string strExit;
-    
-    cout << "Enter any key to exit:\n";
-    cin >> strExit;
-}
-
